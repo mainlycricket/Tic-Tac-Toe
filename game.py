@@ -1,3 +1,5 @@
+# write your code here
+
 cell_list = list(' ' for i in range(0, 10))
 
 win_indices = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
@@ -9,6 +11,7 @@ user_input = 'X'
 
 result = False
 
+
 def print_grid():
 
     print("---------")
@@ -18,6 +21,7 @@ def print_grid():
             print(cell_list[col], end=" ")
         print("|")
     print("---------")
+    
     
 print_grid()
 
@@ -79,9 +83,9 @@ while not result:
     o_count = cell_list.count("O")
 
     for win in win_indices:
-        if cell_list[win[0]] == 'X' and cell_list[win[1]] == 'X'and cell_list[win[2]] == 'X':
+        if cell_list[win[0]] == 'X' and cell_list[win[1]] == 'X' and cell_list[win[2]] == 'X':
             x_win += 1
-        elif cell_list[win[0]] == 'O' and cell_list[win[1]] == 'O'and cell_list[win[2]] == 'O':
+        elif cell_list[win[0]] == 'O' and cell_list[win[1]] == 'O' and cell_list[win[2]] == 'O':
             o_win += 1
             
     if x_win == 1 and o_win < 1:
